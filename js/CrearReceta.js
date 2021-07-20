@@ -2,7 +2,7 @@ new Vue({
     el: '#app',
     data: {
         rut: "",
-        url: "http://localhost/cesfam/",
+        url: "cesfam.herokuapp.com",
         paciente: {},
         pacientes: [],
         esta: false,

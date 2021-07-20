@@ -1,7 +1,7 @@
 new Vue({
     el:'#buscar',
     data:{
-        url:"http://localhost/cesfam/",
+        url:"cesfam.herokuapp.com",
         usuarios:[],
         usuario:{},
         rut:'',

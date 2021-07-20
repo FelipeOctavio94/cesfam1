@@ -1,7 +1,7 @@
 new Vue({
     el:'#app1',
     data:{
-        url:"http://localhost/cesfam/",
+        url:"cesfam.herokuapp.com",
         recetaexiste: false,
         recetas:[],
         receta:{},
