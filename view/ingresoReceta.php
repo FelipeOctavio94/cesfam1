@@ -135,7 +135,6 @@ session_start();
                         <div class="col l3 m3 s12">
                             <button class="btn-small deep-orange">Crear receta</button>
                         </div>
-                        {{$data}}
                     </div>
                     
                 </form>
