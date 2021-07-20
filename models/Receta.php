@@ -18,21 +18,50 @@ class Receta{
     }
 
     //el inner join no se si este bien para que se enlace con el operativo y el paciente la receta
-    public function buscarxRut($rut){
-        $sql = 'SELECT id_receta "id",pt.nombre_paciente "Paciente", 
-        fecha_visita, sintomas, observacion, op.nombre "nombre usuario", 
-        medicamentos, diagnostico 
-        from receta
-        inner join paciente pt
-        on pt.rut_paciente = receta.rut_paciente
-        inner join usuario op
-        on op.rut=receta.rut_operativo
-        where receta.rut_paciente =:A';
-        $stm = Conexion::conector()->prepare($sql);
-        $stm->bindParam(":A", $rut);
-        $stm->execute();
-        return $stm->fetchAll(\PDO::FETCH_ASSOC);
-    }
+    //public function buscarxRut($rut){
+        //$sql = 'SELECT id_receta "id",pt.nombre_paciente "Paciente", 
+        //fecha_visita, sintomas, observacion, op.nombre "nombre usuario", 
+       // medicamentos, diagnostico 
+      //  from receta
+      //  inner join paciente pt
+      //  on pt.rut_paciente = receta.rut_paciente
+      //  inner join usuario op
+     //   on op.rut=receta.rut_operativo
+     //   where receta.rut_paciente =:A';
+     //   $stm = Conexion::conector()->prepare($sql);
+     //   $stm->bindParam(":A", $rut);
+     //   $stm->execute();
+     //   return $stm->fetchAll(\PDO::FETCH_ASSOC);
+  //  }
+  public function buscarxRut($rut){
+
+    $sql = 'SELECT id_receta "id",pt.nombre_paciente "Paciente", pt.telefono_paciente "telefono",
+
+    fecha_visita, sintomas, observacion, op.nombre "Operativo",
+
+    medicamentos, diagnostico 
+
+    from receta
+
+    inner join paciente pt
+
+    on pt.rut_paciente = receta.rut_paciente
+
+    inner join usuario op
+
+    on op.rut=receta.rut_operativo
+
+    where receta.rut_paciente =:A';
+
+    $stm = Conexion::conector()->prepare($sql);
+
+    $stm->bindParam(":A", $rut);
+
+    $stm->execute();
+
+    return $stm->fetchAll(\PDO::FETCH_ASSOC);
+
+}
 
     
     //aun no hago la busqueda por id no se si sea necesario

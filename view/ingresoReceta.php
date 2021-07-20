@@ -52,9 +52,10 @@ session_start();
                 <li><a href="../view/ingresoReceta.php">Receta</a></li>
                 <li><a href="salir.php"><i class="material-icons deep-orange-text" style="font-size: 40px;">exit_to_app</i></a></li>
             </ul>
-
+            
             <div class="container" id="app" style="padding:20px; margin-top:20px; border-radius:10px; align-content:center; background: rgba(255, 255, 255, 0.8)">
-                <div class="row">
+            <h5>Crear receta</h5>  
+            <div class="row">
                     <div class="col l8 m12 s12">
                         <table class="responsive-table" v-if="esta">
                             <tr>
