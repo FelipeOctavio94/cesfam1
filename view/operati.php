@@ -109,11 +109,11 @@
                                 <div class="row">
                                     <div class="col l6 m6 s12">
                                         <p><span style="font-weight: bold;">Nombre paciente:</span> {{receta.Paciente}}</p>
-                                        <p><span style="font-weight: bold;">Telefono paciente:</span> {{receta.paciente}}</p>
+                                        
                                     </div>
                                     <div class="col l6 m6 s12">
                                         <p><span style="font-weight: bold;">Fecha de visita:</span> {{receta.fecha_visita}}</p>
-                                        <p><span style="font-weight: bold;">Atendido por:</span> {{receta.nombre_operativo}}</p>
+                                        <p><span style="font-weight: bold;">Atendido por:</span> {{receta.rut_operativo}}</p>
                                     </div>
 
                                     <div class="col l12 m12 s12">
