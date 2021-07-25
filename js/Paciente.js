@@ -8,7 +8,7 @@ new Vue({
     },
     methods: {
        buscarxRut: async function () {
-         var recurso = "controllers/...";
+         var recurso = "controllers/BuscarPacientexRut.php";
          var form = new FormData();
          form.append("rut", this.rut);
         try {
