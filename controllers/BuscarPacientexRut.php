@@ -1,31 +1,67 @@
 <?php
 
+
+
 namespace controllers;
+
+
 
 use models\Paciente as Paciente;
 
+
+
 require_once("../models/Paciente.php");
+
+
 
 class BuscarPacientexRut{
 
+
+
     public $rut;
 
+
+
     public function __construct()
+
     {
-        $this->rut = $_POST['rut_paciente'];
+
+        $this->rut = $_POST['rut'];
+
     }
 
-    public function buscarPacientexRut(){
+
+
+    public function BuscarPaciente(){
+
         session_start();
-        if(isset($_SESSION['administrativo'])){
-            $modelo = new Paciente();
-            $arr = $modelo->buscarPacientexRut($this->rut);
-            echo json_encode($arr);
+
+        if(isset($_SESSION['user'])){
+
+            if($_SESSION['user']['rol']=="administrativo"){
+
+                $modelo = new Paciente();
+
+                $arr = $modelo->buscarPacienteRut($this->rut);
+
+                echo json_encode($arr);
+
+            }else{
+
+                echo json_encode(["msg"=>"Acceso denegado"]);
+
+            }
 
         }else{
-            echo json_encode(["msg" => "Necesita permisos de Administrativo"]);
+
+            echo json_encode(["msg"=>"Acceso denegado"]);
+
         }
+
     }
+
 }
+
 $obj = new BuscarPacientexRut();
-$obj->buscarPacientexRut();
+
+$obj->BuscarPaciente();
