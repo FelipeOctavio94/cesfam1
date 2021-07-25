@@ -62,6 +62,19 @@ class Receta{
     return $stm->fetchAll(\PDO::FETCH_ASSOC);
 
 }
+public function mostrarReceta(){
+    $sql = 'SELECT id_receta "id",pt.nombre_paciente "Paciente", pt.telefono_paciente "telefono",
+    fecha_visita, sintomas, observacion, op.nombre "Operativo",
+    medicamentos, diagnostico 
+    from receta
+    inner join paciente pt
+    on pt.rut_paciente = receta.rut_paciente
+    inner join usuario op
+    on op.rut=receta.rut_operativo';
+    $stm = Conexion::conector()->prepare($sql);
+    $stm->execute();
+    return $stm->fetchAll(\PDO::FETCH_ASSOC);
+}
 
     
     //aun no hago la busqueda por id no se si sea necesario

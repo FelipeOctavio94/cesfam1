@@ -22,5 +22,10 @@ class Paciente{
         $stm->execute();
         return $stm->fetchAll(\PDO::FETCH_ASSOC);
     }
+    public function mostrarPacientes(){
+        $stm = Conexion::conector()->prepare("SELECT * FROM paciente");
+        $stm->execute();
+        return $stm->fetchAll(\PDO::FETCH_ASSOC);
+    }
 
 }
