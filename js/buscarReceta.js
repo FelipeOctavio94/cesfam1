@@ -37,10 +37,20 @@ new Vue({
           //  window.open(this.url+"controllers/ExportarPDF.php?id="+id,"_blank");
         
         //}
+        cargaReceta: async function () {
+            const recurso = "controllers/CargaRecetas.php";
+            try {
+              const res = await fetch(this.url + recurso);
+              const data = await res.json();
+              this.recetas = data;
+            } catch (error) {
+              console.log(error);
+            }
+          },
 
 
     },
     created(){
-
+        this.cargaReceta();
     }
 });
