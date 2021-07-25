@@ -7,22 +7,22 @@ new Vue({
       rut: '',
     },
     methods: {
-    //   buscarxRut: async function () {
-    //     var recurso = "controllers/...";
-    //     var form = new FormData();
-    //     form.append("rut", this.rut);
-    //     try {
-    //       const res = await fetch(this.url + recurso, {
-    //         method: "post",
-    //         body: form,
-    //       });
-    //       const data = await res.json();
-    //       console.log(data);
-    //       this.usuarios = data;
-    //     } catch (error) {
-    //       console.log(error);
-    //     }
-    //   },
+       buscarxRut: async function () {
+         var recurso = "controllers/...";
+         var form = new FormData();
+         form.append("rut", this.rut);
+        try {
+           const res = await fetch(this.url + recurso, {
+            method: "post",
+             body: form,
+           });
+         const data = await res.json();
+           console.log(data);
+           this.usuarios = data;
+        } catch (error) {
+           console.log(error);
+         }
+       },
   
       cargaPacientes: async function () {
         const recurso = "controllers/CargaPacientes.php";
