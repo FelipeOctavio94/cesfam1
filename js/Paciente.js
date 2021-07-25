@@ -18,7 +18,7 @@ new Vue({
            });
          const data = await res.json();
            console.log(data);
-           this.usuarios = data;
+           this.pacientes = data;
         } catch (error) {
            console.log(error);
          }

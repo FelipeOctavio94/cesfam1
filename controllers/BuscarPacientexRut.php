@@ -12,7 +12,7 @@ class BuscarPacientexRut{
 
     public function __construct()
     {
-        $this->rut = $_POST['rut_paciente'];
+        $this->rut = $_POST['rut'];
     }
 
     public function buscarPacientexRut(){
