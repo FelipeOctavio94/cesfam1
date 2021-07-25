@@ -28,7 +28,7 @@ session_start();
                     <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin-right: 20px;">
 
 
-                        <li><a href="!#.">Buscar Usuario<i class="material-icons left">search</i></a></li>
+                        <li><a href="buscarPaciente.php">Buscar Paciente<i class="material-icons left">search</i></a></li>
                         <li><a href="salir.php"><i class="material-icons" style="font-size: 40px;">exit_to_app</i></a></li>
                     </ul>
                 </div>
