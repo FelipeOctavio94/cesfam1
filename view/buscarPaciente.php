@@ -28,7 +28,7 @@ session_start();
                     <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin-right: 20px;">
 
                         <li><a href="adminis.php">Nuevo Paciente<i class="material-icons left">playlist_add</i></a></li>
-                        <li><a href="buscarPaciente.php">Buscar Usuario<i class="material-icons left">search</i></a></li>
+                        <li><a href="buscarPaciente.php">Buscar Paciente<i class="material-icons left">search</i></a></li>
                         <li><a href="salir.php"><i class="material-icons" style="font-size: 40px;">exit_to_app</i></a></li>
                     </ul>
                 </div>
@@ -76,7 +76,7 @@ session_start();
                                 <th>Dirección</th>
                                 <th>fecha Creacion</th>
                                 <th>Correo</th>
-                                <th>Eliminar/Editar</th>
+                                <th>Eliminar</th>
                             </tr>
 
                             <tr v-for="p in pacientes">
@@ -89,7 +89,7 @@ session_start();
                                     <!-- <button name="bt_delete" v-model="u.rut" class="btn-floating red">
                                     <i class="material-icons">delete</i>
                                 </button> -->
-                                    <button @click="eliminar(p.rut_paciente)" class="btn-small red" name="rut">Eliminar</button> / <button @click="editar(p)" class="btn-small deep-orange">Editar</button>
+                                    <button @click="eliminar(p.rut_paciente)" class="btn-small red" name="rut">Eliminar</button>
                                 </td>
                                 <!-- <td>
                                 <button @click="abrirModal(r)" class="btn-small deep-orange">Detalle</button>

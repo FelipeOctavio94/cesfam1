@@ -2,7 +2,7 @@
 
 namespace controllers;
 
-use models\Informatico;
+use models\Informatico as Informatico;
 
 require_once("../models/Informatico.php");
 
@@ -17,18 +17,17 @@ class EliminarUsuario{
 
     public function eliminarUser(){
         session_start();
-        if ($this->rut == "") {
-            json_encode(['msg'=>'no se ha seleccionado rut']);
-        }
-        
+                
         $modelo = new Informatico();
         $n = $modelo->BorrarUsuario($this->rut);
         if ($n >= 0) {
-            json_encode(['msg'=>'eliminado']);  
+            $mensaje = ["msg"=>"Usuario Eliminado exitosamente"];
+            echo json_encode($mensaje); 
         }else{
-            json_encode(['msg'=>'Error en la base de datos']);  
+            $mensaje = ["msg"=>"Error en la BD"];
+            echo json_encode($mensaje); 
         }
-
-        json_encode(['msg'=>'Exitosamente']);  
     }
 }
+$obj = new EliminarUsuario();
+$obj->eliminarUser();
