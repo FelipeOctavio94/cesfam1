@@ -23,8 +23,8 @@
                     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin-right: 20px;">
                    
-                        <li><a href="../view/operati.php">Buscar receta<i class="material-icons left">search</i></a></li>
-                        <li><a href="../view/ingresoReceta.php">Receta<i class="material-icons left">playlist_add</i></a></li>
+                        <li><a href="../view/operati.php">Buscar historial<i class="material-icons left">search</i></a></li>
+                        <li><a href="../view/ingresoReceta.php">Historial medico<i class="material-icons left">playlist_add</i></a></li>
                         <li><a href="salir.php"><i class="material-icons" style="font-size: 40px;">exit_to_app</i></a></li>
                     </ul>
                 </div>
@@ -43,13 +43,13 @@
                     </div>
                 </li>
                 
-                <li><a href="../view/operati.php">Buscar receta</a></li>
-                <li><a href="../view/ingresoReceta.php">Receta</a></li>
+                <li><a href="../view/operati.php">Buscar historial</a></li>
+                <li><a href="../view/ingresoReceta.php">Historial medico</a></li>
                 <li><a href="salir.php"><i class="material-icons deep-orange-text" style="font-size: 40px;">exit_to_app</i></a></li>
             </ul>
 
             <div class="container" style="padding:20px; margin-top:20px; border-radius:10px; align-content:center; background: rgba(255, 255, 255, 0.8)">
-                <h5>Buscar receta</h5>
+                <h5>Buscar historial</h5>
                 <br>
                 <div class="row" id="app1">
                     <form @submit.prevent="buscarRut">

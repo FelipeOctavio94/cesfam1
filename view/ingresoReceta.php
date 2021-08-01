@@ -11,7 +11,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nueva receta</title>
+    <title>Nuevo historial</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -28,8 +28,8 @@ session_start();
                     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin-right: 20px;">
 
-                        <li><a href="../view/operati.php">Buscar receta<i class="material-icons left">search</i></a></li>
-                        <li><a href="../view/ingresoReceta.php">Receta<i class="material-icons left">playlist_add</i></a></li>
+                        <li><a href="../view/operati.php">Buscar Historial<i class="material-icons left">search</i></a></li>
+                        <li><a href="../view/ingresoReceta.php">Historial Medico<i class="material-icons left">playlist_add</i></a></li>
                         <li><a href="salir.php"><i class="material-icons" style="font-size: 40px;">exit_to_app</i></a></li>
                     </ul>
                 </div>
@@ -48,12 +48,13 @@ session_start();
                     </div>
                 </li>
 
-                <li><a href="../view/operati.php">Buscar receta</a></li>
-                <li><a href="../view/ingresoReceta.php">Receta</a></li>
+                <li><a href="../view/operati.php">Buscar historial</a></li>
+                <li><a href="../view/ingresoReceta.php">Historial medico</a></li>
                 <li><a href="salir.php"><i class="material-icons deep-orange-text" style="font-size: 40px;">exit_to_app</i></a></li>
             </ul>
 
             <div class="container" id="app" style="padding:20px; margin-top:20px; border-radius:10px; align-content:center; background: rgba(255, 255, 255, 0.8)">
+            <h5>Crear historial medico</h5> 
             <div class="row">
                     <div class="col l8 m12 s12">
                         <table class="responsive-table" v-if="esta">
