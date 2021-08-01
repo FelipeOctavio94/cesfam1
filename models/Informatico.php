@@ -24,11 +24,7 @@ class Informatico{
         return $stm->execute();
     }
 
-    public function eliminarUsuario($rut){
-        $stm = Conexion::conector()->prepare("DELETE FROM usuario WHERE rut=:A");
-        $stm->bindParam(":A",$rut);
-        return $stm->execute();
-    }
+   
     
     public function mostrarUsuarios(){
         $stm= Conexion::conector()->prepare("SELECT * FROM usuario");
@@ -41,4 +37,8 @@ class Informatico{
         $stm->execute();
         return $stm->fetchAll(\PDO::FETCH_ASSOC);
     }
-}
+    public function BorrarUsuario($rut){
+        $stm = Conexion::conector()->prepare("DELETE FROM usuario WHERE rut=:rut");
+        $stm->bindParam(":rut",$rut);
+        return $stm->execute();
+    }  

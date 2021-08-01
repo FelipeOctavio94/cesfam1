@@ -66,11 +66,12 @@ session_start();
                         <br>
                         <button class="btn-small deep-orange">Buscar</button>
                     </div>
+                   
                 </form>
 
                 <div class="col l12 m12 s12">
                     <hr style="height:3px; border:none; background: #dd2c00; margin-bottom:20px;">
-                            
+
                     <table>
                         <tr>
                             <th>Rut</th>
@@ -84,7 +85,10 @@ session_start();
                             <td>{{u.nombre}}</td>
                             <td>{{u.rol}}</td>
                             <td>
-                                <button @click="eliminar(u.rut)" class="btn-small red">Eliminar</button> / <button @click="editar(u)" class="btn-small deep-orange">Editar</button> 
+                                <!-- <button name="bt_delete" v-model="u.rut" class="btn-floating red">
+                                    <i class="material-icons">delete</i>
+                                </button> -->
+                                <button @click="eliminar(u.rut)" class="btn-small red" name="rut">Eliminar</button> / <button @click="editar(u)" class="btn-small deep-orange">Editar</button>
                             </td>
                             <!-- <td>
                                 <button @click="abrirModal(r)" class="btn-small deep-orange">Detalle</button>

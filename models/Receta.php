@@ -78,7 +78,11 @@ public function mostrarReceta(){
 
     
     //aun no hago la busqueda por id no se si sea necesario
-   
+    public function borrarReceta($id){
+        $stm = Conexion::conector()->prepare("DELETE FROM receta WHERE id_receta=:id");
+        $stm->bindParam(":id",$id);
+        return $stm->execute();
+    }
 
 
 }

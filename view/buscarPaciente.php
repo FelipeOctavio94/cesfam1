@@ -27,8 +27,8 @@ session_start();
                     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin-right: 20px;">
 
-                        <li><a href="adminis.php">Crear Paciente<i class="material-icons left">search</i></a></li>
-                        <li><a href="buscarPaciente.php">Buscar Paciente<i class="material-icons left">search</i></a></li>
+                        <li><a href="adminis.php">Nuevo Paciente<i class="material-icons left">playlist_add</i></a></li>
+                        <li><a href="buscarPaciente.php">Buscar Usuario<i class="material-icons left">search</i></a></li>
                         <li><a href="salir.php"><i class="material-icons" style="font-size: 40px;">exit_to_app</i></a></li>
                     </ul>
                 </div>
@@ -89,7 +89,7 @@ session_start();
                                     <!-- <button name="bt_delete" v-model="u.rut" class="btn-floating red">
                                     <i class="material-icons">delete</i>
                                 </button> -->
-                                    <button @click="eliminar(u.rut)" class="btn-small red" name="rut">Eliminar</button> / <button @click="editar(u)" class="btn-small deep-orange">Editar</button>
+                                    <button @click="eliminar(p.rut_paciente)" class="btn-small red" name="rut">Eliminar</button> / <button @click="editar(p)" class="btn-small deep-orange">Editar</button>
                                 </td>
                                 <!-- <td>
                                 <button @click="abrirModal(r)" class="btn-small deep-orange">Detalle</button>

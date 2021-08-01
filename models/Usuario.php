@@ -37,7 +37,11 @@ class Usuario{
         $stm->execute();
         return $stm->fetchAll(\PDO::FETCH_ASSOC);
     }
-
+    public function borrarPaciente($rut){
+        $stm = Conexion::conector()->prepare("DELETE FROM paciente WHERE rut_paciente=:A");
+        $stm->bindParam(":A",$rut);
+        return $stm->execute();
+    }  
     
 
 }

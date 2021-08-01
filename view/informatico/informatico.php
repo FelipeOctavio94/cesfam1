@@ -32,7 +32,7 @@
                     <button class="waves-effect waves-light btn ancho-100 deep-orange ancho-100" style="font-family: 'Coustard', serif;">Iniciar sesión</button>
                 </p>
             </form>
-            <p class="center"><a href="../../index.php">volver</a></p>
+            <p class="center"><a href="../../index.php">voler</a></p>
             <p class="red-text center">
                 <?php
                     session_start();

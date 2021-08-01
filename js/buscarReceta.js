@@ -37,6 +37,24 @@ new Vue({
           //  window.open(this.url+"controllers/ExportarPDF.php?id="+id,"_blank");
         
         //}
+        eliminar: async function(id){
+            const recurso = "controllers/EliminarReceta.php";
+            var form = new FormData();
+            form.append("id",id);
+            try {
+                const res = await fetch(this.url + recurso, {
+                    method: "post",
+                    body: form,
+                });
+                const data = await res.text();
+                console.log(data);
+                M.toast({html: "¡Eliminada Exitosamente!"});
+            } catch (error) {
+                console.log(error);
+                M.toast({html: "¡Error al Eliminar!"});
+            }
+            this.cargaReceta();
+        },
         cargaReceta: async function () {
             const recurso = "controllers/CargaRecetas.php";
             try {

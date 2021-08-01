@@ -23,8 +23,8 @@
                     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin-right: 20px;">
                    
-                        <li><a href="../view/operati.php">Buscar historial medico<i class="material-icons left">search</i></a></li>
-                        <li><a href="../view/ingresoReceta.php">Historial medico<i class="material-icons left">playlist_add</i></a></li>
+                        <li><a href="../view/operati.php">Buscar receta<i class="material-icons left">search</i></a></li>
+                        <li><a href="../view/ingresoReceta.php">Receta<i class="material-icons left">playlist_add</i></a></li>
                         <li><a href="salir.php"><i class="material-icons" style="font-size: 40px;">exit_to_app</i></a></li>
                     </ul>
                 </div>
@@ -43,8 +43,8 @@
                     </div>
                 </li>
                 
-                <li><a href="../view/operati.php">Buscar historial medico</a></li>
-                <li><a href="../view/ingresoReceta.php">Historial medico</a></li>
+                <li><a href="../view/operati.php">Buscar receta</a></li>
+                <li><a href="../view/ingresoReceta.php">Receta</a></li>
                 <li><a href="salir.php"><i class="material-icons deep-orange-text" style="font-size: 40px;">exit_to_app</i></a></li>
             </ul>
 
@@ -74,15 +74,16 @@
                             <tr>
                                 <th>Nombre del paciente</th>
                                 <th>Fecha de visita</th>
-                                <th></th>
-                                <th></th>
+                                <th>Acciones</th>
                             </tr>
 
                             <tr v-for="r in recetas">
                                 <td>{{r.Paciente}}</td>
                                 <td>{{r.fecha_visita}}</td> 
                                 <td>
-                                    <button @click="abrirModal(r)" class="btn-small deep-orange">Detalle</button>
+                                    <button @click="abrirModal(r)" class="btn-small ">Detalle</button>
+                                    <!-- <button @click="openEdit"       class="btn-small deep-orange">Modificar</button> -->
+                                    <button @click="eliminar(r.id)" class="btn-small red" name="id">Eliminar</button>
                                 </td>
                                 <!-- para generar PDF
                                     <td>
@@ -107,21 +108,14 @@
                                 </div>
                                 <hr style="height:3px; border:none; background: #dd2c00; margin-bottom:20px;">
                                 <div class="row">
-                                <div class="col l6 m6 s12">
-
-                                    <p><span style="font-weight: bold;">Nombre paciente:</span> {{receta.Paciente}}</p>
-
-                                    <p><span style="font-weight: bold;">Telefono paciente:</span> {{receta.telefono}}</p>
-
-                                </div>
-
-                                <div class="col l6 m6 s12">
-
-                                    <p><span style="font-weight: bold;">Fecha de visita:</span> {{receta.fecha_visita}}</p>
-
-                                    <p><span style="font-weight: bold;">Atendido por:</span> {{receta.Operativo}}</p>
-
-                                        </div>
+                                    <div class="col l6 m6 s12">
+                                        <p><span style="font-weight: bold;">Nombre paciente:</span> {{receta.Paciente}}</p>
+                                        <p><span style="font-weight: bold;">Telefono paciente:</span> {{receta.telefono}}</p>
+                                    </div>
+                                    <div class="col l6 m6 s12">
+                                        <p><span style="font-weight: bold;">Fecha de visita:</span> {{receta.fecha_visita}}</p>
+                                        <p><span style="font-weight: bold;">Atendido por:</span> {{receta.Operativo}}</p>
+                                    </div>
 
                                     <div class="col l12 m12 s12">
                                         <hr style="height:3px; border:none; background: #dd2c00; margin-bottom:20px;">

@@ -38,7 +38,24 @@ new Vue({
         }
 
       },
-  
+      eliminar: async function(rut){
+        const recurso = "controllers/EliminarPaciente.php";
+        var form = new FormData();
+        form.append("rut",rut);
+        try {
+          const res = await fetch(this.url + recurso, {
+            method: "post",
+            body: form,
+          });
+          const data = await res.text();
+          console.log(data);
+          M.toast({ html: "¡Eliminado Exitosamente!" });
+        } catch (error) {
+          console.log(error);
+          M.toast({ html: "¡Error al Eliminar!" });
+        }
+        this.cargaPacientes();
+      },
       cargaPacientes: async function () {
         const recurso = "controllers/CargaPacientes.php";
         try {

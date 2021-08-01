@@ -23,6 +23,24 @@ new Vue({
             console.log(error);
         }
     },
+    eliminar: async function(rut){
+      const recurso = "controllers/EliminarUsuario.php";
+      var form = new FormData();
+      form.append("rut",rut);
+      try {
+        const res = await fetch(this.url + recurso, {
+          method: "post",
+          body: form,
+        });
+        const data = await res.text();
+        console.log(data);
+        M.toast({ html: "¡Eliminado Exitosamente!" });      
+      } catch (error) {
+        console.log(error);
+        M.toast({ html: "¡Error al Eliminar!" }); 
+      }
+      this.cargaUsuarios();
+    },
         cargaUsuarios: async function () {
             const recurso = "controllers/CargaUsuarios.php";
             try {

@@ -28,8 +28,8 @@ session_start();
                     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin-right: 20px;">
 
-                        <li><a href="../view/operati.php">Buscar historial medico<i class="material-icons left">search</i></a></li>
-                        <li><a href="../view/ingresoReceta.php">Historial medico<i class="material-icons left">playlist_add</i></a></li>
+                        <li><a href="../view/operati.php">Buscar receta<i class="material-icons left">search</i></a></li>
+                        <li><a href="../view/ingresoReceta.php">Receta<i class="material-icons left">playlist_add</i></a></li>
                         <li><a href="salir.php"><i class="material-icons" style="font-size: 40px;">exit_to_app</i></a></li>
                     </ul>
                 </div>
@@ -48,13 +48,12 @@ session_start();
                     </div>
                 </li>
 
-                <li><a href="../view/operati.php">Buscar historial medico</a></li>
-                <li><a href="../view/ingresoReceta.php">Historial medico</a></li>
+                <li><a href="../view/operati.php">Buscar receta</a></li>
+                <li><a href="../view/ingresoReceta.php">Receta</a></li>
                 <li><a href="salir.php"><i class="material-icons deep-orange-text" style="font-size: 40px;">exit_to_app</i></a></li>
             </ul>
-            
+
             <div class="container" id="app" style="padding:20px; margin-top:20px; border-radius:10px; align-content:center; background: rgba(255, 255, 255, 0.8)">
-            <h5>Crear historial medico</h5>  
             <div class="row">
                     <div class="col l8 m12 s12">
                         <table class="responsive-table" v-if="esta">
@@ -136,6 +135,7 @@ session_start();
                         <div class="col l3 m3 s12">
                             <button class="btn-small deep-orange">Crear receta</button>
                         </div>
+                        
                     </div>
                     
                 </form>
